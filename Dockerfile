@@ -1,4 +1,4 @@
-FROM diuis/docker-emsdk-opencv3-base:18.10-python2
+FROM diuis/docker-emsdk-opencv3-base:18.10-python3
 
 USER appuser
 RUN cd /home/appuser/opencv && \
