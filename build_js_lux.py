@@ -151,7 +151,7 @@ class Builder:
 
     def get_build_flags(self):
         flags = ""
-        flags += "-s USE_PTHREADS=0 "
+        flags += "-s USE_PTHREADS=0 -s PRECISE_F32=1 "
         if self.options.build_wasm:
             flags += "-s WASM=1 "
         elif self.options.disable_wasm:
