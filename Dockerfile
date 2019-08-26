@@ -1,4 +1,4 @@
-FROM diuis/docker-emsdk-opencv3-base:ubuntu19.04-python2-emsdk1.38.42-opencv3.4.7
+FROM diuis/docker-emsdk-opencv3-base:19.04-python2-emsdk1.38.42-opencv3.4.7
 
 USER appuser
 ADD build_js_lux.py /home/appuser/opencv/platforms/js/build_js_lux.py
