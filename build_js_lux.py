@@ -145,8 +145,8 @@ class Builder:
 
         flags = self.get_build_flags()
         if flags:
-            cmd += ["-DCMAKE_C_FLAGS='%s'" % flags,
-                    "-DCMAKE_CXX_FLAGS='%s'" % flags]
+            cmd += ["-DCMAKE_C_FLAGS='%s -O1'" % flags,
+                    "-DCMAKE_CXX_FLAGS='%s -O1'" % flags]
         return cmd
 
     def get_build_flags(self):
