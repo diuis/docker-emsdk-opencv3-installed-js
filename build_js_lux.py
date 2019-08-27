@@ -151,7 +151,7 @@ class Builder:
 
     def get_build_flags(self):
         flags = ""
-        flags += "-O2 -s USE_PTHREADS=0 -s PRECISE_F32=1 -s BINARYEN_TRAP_MODE=clamp "
+        flags += "-s -O1 -s USE_PTHREADS=0 -s PRECISE_F32=1 -s BINARYEN_TRAP_MODE=clamp "
         if self.options.build_wasm:
             flags += "-s WASM=1 "
         elif self.options.disable_wasm:
@@ -244,7 +244,6 @@ if __name__ == "__main__":
         log.info("===== Building OpenCV.js tutorials")
         log.info("=====")
         builder.build_doc()
-
 
     log.info("=====")
     log.info("===== Build finished")
