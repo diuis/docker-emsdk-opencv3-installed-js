@@ -145,13 +145,13 @@ class Builder:
 
         flags = self.get_build_flags()
         if flags:
-            cmd += ["-DCMAKE_C_FLAGS='%s -O1'" % flags,
-                    "-DCMAKE_CXX_FLAGS='%s -O1'" % flags]
+            cmd += ["-DCMAKE_C_FLAGS='%s'" % flags,
+                    "-DCMAKE_CXX_FLAGS='%s'" % flags]
         return cmd
 
     def get_build_flags(self):
         flags = ""
-        flags += "-s USE_PTHREADS=0 -s PRECISE_F32=1 -s BINARYEN_TRAP_MODE=clamp "
+        flags += "-O2 -s USE_PTHREADS=0 -s PRECISE_F32=1 -s BINARYEN_TRAP_MODE=clamp "
         if self.options.build_wasm:
             flags += "-s WASM=1 "
         elif self.options.disable_wasm:
